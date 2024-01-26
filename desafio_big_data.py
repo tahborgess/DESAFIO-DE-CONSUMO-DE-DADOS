@@ -36,13 +36,13 @@ def fetch_data(endpoint):
 
 endpoints = ['starships','people','vehicles','planets']
 
-# Fetch the starship data
+# Conectando os dados de starships
 starships_data = fetch_data('starships')
 
-# Convert the data into a pandas DataFrame
+# Convertendo os dados em um dataframe utilizando pandas.
 starships_df = pd.DataFrame(starships_data)
 
-# Display the first few rows of the DataFrame
+# Exibindo as primeiras 5 linhas do dataframe.
 starships_df.head()
 
 """## Passo 4: Criação do banco de dados"""
@@ -90,7 +90,7 @@ def read_table_as_dataframe(db_name, table_name):
     return df
 
 
-# Examplo
+# Exemplo
 db_name = 'swapi.db'
 table_name = 'starships'
 starships_df = read_table_as_dataframe(db_name, table_name)
